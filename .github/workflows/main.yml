@@ -24,4 +24,4 @@ jobs:
         run: go run -v ./checkin.go
         with:
           email: ${{ secrets.CORDCLOUD_EMAIL }}
-          passwd: ${{ secrets.CORDCLOUD_PASSWD }}v ./...
+          passwd: ${{ secrets.CORDCLOUD_PASSWD }}
