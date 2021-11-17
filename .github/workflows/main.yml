@@ -1,0 +1,16 @@
+name: CordcloudCheckin
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    name: Generate starcharts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: YXxy1002/cordcloud-checkin@main
+        with:
+          email: ${{ secrets.CORDCLOUD_EMAIL }}
+          passwd: ${{ secrets.CORDCLOUD_PASSWD }}
