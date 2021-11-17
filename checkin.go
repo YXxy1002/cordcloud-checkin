@@ -2,17 +2,17 @@ package main
 
 import (
 	"fmt"
-	"github.com/sethvargo/go-githubactions"
 	"io/ioutil"
 	"net/http"
 	"net/http/cookiejar"
 	"net/url"
+	"os"
 	"time"
 )
 
 func main() {
-	email := githubactions.GetInput("email")
-	passwd := githubactions.GetInput("passwd")
+	email := os.Getenv("email")
+	passwd := os.Getenv("passwd")
 	checkIn(email, passwd, "")
 }
 
