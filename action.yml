@@ -1,0 +1,19 @@
+name: CordcloudCheckin Action
+description: CordcloudCheckin
+author: Xieyu
+branding:
+  icon: "bar-chart"
+  color: "blue"
+
+inputs:
+  email:
+    description: email
+    required: true
+
+  passwd:
+    description: passwd
+    required: true
+
+runs:
+  using: docker
+  image: slim.dockerfile
